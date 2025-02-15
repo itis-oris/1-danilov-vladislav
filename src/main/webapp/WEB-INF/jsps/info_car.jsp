@@ -8,28 +8,28 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<link rel="stylesheet" href="/styles/style.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/style.css">
 <html>
 <head>
     <title>Info about car</title>
-    <link rel="icon" href="/pages/ico.png" type="image/png">
+    <link rel="icon" href="${pageContext.request.contextPath}/pages/ico.png" type="image/png">
 </head>
 <body>
 <div id = "wrapper">
     <div id = "header" align="center">
-        <img class = "myImage" src="/icons/back.jpg" onclick="location.href='${pageContext.servletContext.contextPath}${end}'">
+        <img class = "myImage" src="${pageContext.request.contextPath}/icons/back.jpg" onclick="location.href='${pageContext.servletContext.contextPath}${end}'">
         <c:if test="${pravo}">
-            <img class="myImage2" src="/icons/delete-1487-svgrepo-com.svg" onclick="location.href='${pageContext.servletContext.contextPath}${uri}/delete?auto_id=${car.getId()}'">
-            <img class="myImage2" src="/icons/settings-2-svgrepo-com.svg" onclick="location.href='${pageContext.servletContext.contextPath}${uri}/update?auto_id=${car.getId()}'">
+            <img class="myImage2" src="${pageContext.request.contextPath}/icons/delete-1487-svgrepo-com.svg" onclick="location.href='${pageContext.servletContext.contextPath}${uri}/delete?auto_id=${car.getId()}'">
+            <img class="myImage2" src="${pageContext.request.contextPath}/icons/settings-2-svgrepo-com.svg" onclick="location.href='${pageContext.servletContext.contextPath}${uri}/update?auto_id=${car.getId()}'">
         </c:if>
         <c:if test="${sessionScope.get('username') != null}">
             <c:if test="${!exist}">
-                <img class="myImage2" src="/icons/heart-black.svg" onclick="location.href = '${pageContext.servletContext.contextPath}${uri}/setting_like?auto_id=${car.getId()}&do=add'">
+                <img class="myImage2" src="${pageContext.request.contextPath}/icons/heart-black.svg" onclick="location.href = '${pageContext.servletContext.contextPath}${uri}/setting_like?auto_id=${car.getId()}&do=add'">
             </c:if>
             <c:if test="${exist}">
-                <img class="myImage2" src="/icons/heart-red.svg" onclick="location.href = '${pageContext.servletContext.contextPath}${uri}/setting_like?auto_id=${car.getId()}&do=delete'">
+                <img class="myImage2" src="${pageContext.request.contextPath}/icons/heart-red.svg" onclick="location.href = '${pageContext.servletContext.contextPath}${uri}/setting_like?auto_id=${car.getId()}&do=delete'">
             </c:if>
-            <img class="myImage2" src = "/icons/report-among-us-online-game-svgrepo-com.svg" onclick="location.href = '${pageContext.servletContext.contextPath}${uri}/report?auto_id=${car.getId()}'">
+            <img class="myImage2" src = "${pageContext.request.contextPath}/icons/report-among-us-online-game-svgrepo-com.svg" onclick="location.href = '${pageContext.servletContext.contextPath}${uri}/report?auto_id=${car.getId()}'">
         </c:if>
         <h1>Подробнее об автомобиле</h1>
     </div>
@@ -74,7 +74,7 @@
     <div id="footer">
         <p class="fon"><strong>Телефон:<br> +7 953 015 62 18</strong> </p>
         <p class="mail"><strong>E-mail<br>helloampro@gmail.com</strong></p>
-        <img class = "logo_bottom" src="/icons/логотип-без-фона.png">
+        <img class = "logo_bottom" src="${pageContext.request.contextPath}/icons/логотип-без-фона.png">
     </div>
 
 </div>

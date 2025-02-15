@@ -8,17 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<link rel="stylesheet" href="/styles/w3.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/w3.css">
 <html>
 <head>
     <title>List of reports</title>
     <script type="text/javascript" src="../../js/functionsForDelete.js"></script>
-    <link rel="icon" href="/pages/ico.png" type="image/png">
+    <link rel="icon" href="${pageContext.request.contextPath}/pages/ico.png" type="image/png">
 </head>
 <body>
 <div id = wrapper>
     <div id = "header" align="center">
-        <img class="myImage" src="/icons/back.jpg" onclick="location.href='../..'">
+        <img class="myImage" src="${pageContext.request.contextPath}/icons/back.jpg" onclick="location.href='../..'">
         <h1>Список жалоб</h1>
     </div>
     <div>
@@ -58,7 +58,7 @@
     <div id="footer">
         <p class="fon"><strong>Телефон:<br> +7 953 015 62 18</strong> </p>
         <p class="mail"><strong>E-mail<br>helloampro@gmail.com</strong></p>
-        <img class = "logo_bottom" src="/icons/логотип-без-фона.png">
+        <img class = "logo_bottom" src="${pageContext.request.contextPath}/icons/логотип-без-фона.png">
     </div>
 </div>
 </body>

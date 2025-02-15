@@ -9,18 +9,18 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<link rel="stylesheet" href="/styles/add.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/add.css">
 <fmt:requestEncoding value="UTF-8"/>
 <html>
 <head>
-    <link rel="icon" href="../../pages/ico.png" type="image/png">
+    <link rel="icon" href="../..${pageContext.request.contextPath}/pages/ico.png" type="image/png">
     <title>Add car</title>
     <meta charset="UTF-8">
 </head>
 <body>
 <div id="wrapper">
     <div id = "header" align="center">
-        <img src="/icons/back.jpg" class = "myImage" onclick="location.href='../..'">
+        <img src="${pageContext.request.contextPath}/icons/back.jpg" class = "myImage" onclick="location.href='../..'">
         <h1>Добавление объявления</h1>
     </div>
     <div align="center">
@@ -74,7 +74,7 @@
     <div id = "footer">
         <p class="fon"><strong>Телефон:<br> +7 953 015 62 18</strong> </p>
         <p class="mail"><strong>E-mail<br>helloampro@gmail.com</strong></p>
-        <img class = "logo_bottom" src="/icons/логотип-без-фона.png">
+        <img class = "logo_bottom" src="${pageContext.request.contextPath}/icons/логотип-без-фона.png">
     </div>
 </div>
 
